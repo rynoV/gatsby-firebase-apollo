@@ -1,0 +1,30 @@
+{
+  "name": "gatsby-netlify-apollo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:functions": "yarn workspace functions develop",
+    "dev:client": "yarn wait-for-server && yarn workspace client develop",
+    "dev": "run-p --print-label dev:*",
+    "serve:functions": "yarn workspace functions serve",
+    "serve:client": "yarn wait-for-server && yarn workspace client serve --port 5001",
+    "serve": "run-p --print-label serve:*",
+    "deploy:functions": "yarn workspace functions deploy",
+    "deploy:client": "yarn workspace client deploy",
+    "deploy": "yarn deploy:functions && yarn deploy:client",
+    "build:functions": "yarn workspace functions build",
+    "build:client": "yarn workspace client build",
+    "build": "yarn build:functions && yarn build:client",
+    "wait-for-server": "wait-on --delay 5000 http://localhost:5000"
+  },
+  "workspaces": [
+    "client",
+    "functions"
+  ],
+  "devDependencies": {
+    "apollo": "^2.18.0",
+    "firebase-tools": "^7.3.0",
+    "npm-run-all": "^4.1.5",
+    "wait-on": "^3.3.0"
+  },
+  "private": true
+}

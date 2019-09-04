@@ -1,0 +1,37 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "scripts": {
+    "develop": "run-p type-check:watch serve",
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "yarn build && firebase serve --only functions",
+    "shell": "yarn build && firebase functions:shell",
+    "start": "yarn shell",
+    "predeploy": "yarn build",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "type-check:watch": "yarn build --watch --preserveWatchOutput"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "apollo-datasource": "^0.6.3",
+    "apollo-datasource-rest": "^0.6.4",
+    "apollo-server-express": "^2.9.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase": "^6.5.0",
+    "firebase-admin": "^8.4.0",
+    "firebase-functions": "^3.1.0",
+    "graphql-tools": "^4.0.5",
+    "isemail": "^3.2.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "private": true
+}

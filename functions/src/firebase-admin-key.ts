@@ -1,0 +1,12 @@
+export const serviceAccount = {
+  type                       : 'service_account',
+  project_id                 : 'fir-learn-f283b',
+  private_key_id             : 'e6699993edca099b2c6558a7f158365c5f993424',
+  private_key                : '-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDFwKpLpUFgsQGr\n3ZsyiY0MHSUjoQ4Imf4L8JmpOvCefnwV4y2pg3X/RVwx2pwqp3C/JSdg0jGQgs83\nALIwWrVvJQk9splaDvtbeovQ+mS1TOyYGL45l9bUGPd27cBzBewnTOeC7E/TmGzH\nQoZEen15yNzsMB/elB8oBmnjee0oDpKpGv/lPiLXwyFNmefwQYEreI4O4zgNBfas\nyvMvTycWksSl54PpuCqp9css/Gu1YYEWQHHZCsNa+SqkcpcvDez1To7MooGOwSum\nVwnhs25Cc3RmjSRDq+NzUIU228A9jgPgacmb1TZ9DcV+q7+fvchYbRifRfM+cQU0\nygBWN9bXAgMBAAECggEAA7WGLfPuxIstYS5qHcn9kkTtrNhnQt60/enlB+6Noe0t\noYaTapEVcLgri70rLAWjTS0tVZHmX2y9kK1Q/54SKABMnGf5DXrSPFSt+1YDaOKv\n7AWBAhylE+LlVAJICTy1iKllKVpDVXsBofnPVx4i0JOec9cx5yoQSVDmXm3IBNmC\ndi6qZsw82Bm5RuqRoNwmuXYTsMbnmnt5084pM7B3+mNAKiBR4DGLHatlIYDfko4c\nih36/yRtCJ/0LNXUb4yMuaRZKxKnwIOVgY+9r/HWd0ppXu06pmCzeFj53Q9zLYLl\ndzk7LwDsly9DTPQvMNRPo3d/g904iSdqCAuU0ezWMQKBgQDhm7FOOTPTtmQVP3R4\nVbVJe0aVsoYV+Ur8nt+K4MAhwXTLSDr902Ejpx7L96ps5aeYrzLcaoBvG72GAaul\nhCWNwSq5ZcegiYVU8s59J6YEpkMI914QUdp7LyJzflNHxq+VV/npZer7ruV3MhkP\n0/AhrVlkDjAYRLoJs5M5LG4rWQKBgQDgZFjja2RsE+avi9pNUCy8LVsJGTPjMahC\n4y6a5j3qDpWcDjmttkpOJV/R95rBZpLT1F/waqhIOgdvKBBJzJRojwT1M4VAHVJ3\nMc3lNf9liKlCRFGrChagz5N+ugqVpvY/cNnRxLyomyQENJF0C5bB81anWQCTXvyY\nh++UnLQ9rwKBgQC+TIWSZc3Blud0xMGJf0IbaVBwlNVlU5Jc4+XLTyjBUF0j2xln\nYRVe7Wicw5uNn2lu8NkF8w/CqLOEhYQzaPQEThurpp5sW5OLxANIrljrMxL4TS+a\ntHCF14xHvxagRId2gW7b4IwFH9GOaUOahjrXLVFphE4tKkuCQ2a7oy6KgQKBgQCy\nej5VTRMH/+BJmqRdQDsExdKV7wzdVZ7u7MIiBKYUZ9tJz+rCp658b6/CUv4tfEem\n41IX6M3G/Rjyqdwixuz4KWGZIoyHDYuNMPkCqitk+AkgozSOJa0P5Wr8rj9C/xT4\nKuultKUWOqewDJvwwFL+G22+F8WkcjXZoK3H98hJEwKBgHmbRjZtfhi5JqhJoigM\nm17ZF9cSHcWo2ytPHST8kMoDdPR26JiDwRVOiaVN5xoWBufFXnwkirL696CgkjYf\ngaeUEmP6cTG7M5RB8BB/3rLG7Zyu4ftbA7ZZ2+CsKLSSh+NJcZOA0u7BF/qr3EcX\n7N6Jngl58QU5SryOT8xniPYV\n-----END PRIVATE KEY-----\n',
+  client_email               : 'fir-learn-f283b@appspot.gserviceaccount.com',
+  client_id                  : '116534069411809013262',
+  auth_uri                   : 'https://accounts.google.com/o/oauth2/auth',
+  token_uri                  : 'https://oauth2.googleapis.com/token',
+  auth_provider_x509_cert_url: 'https://www.googleapis.com/oauth2/v1/certs',
+  client_x509_cert_url       : 'https://www.googleapis.com/robot/v1/metadata/x509/fir-learn-f283b%40appspot.gserviceaccount.com',
+}
