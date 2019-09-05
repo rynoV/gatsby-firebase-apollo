@@ -870,8 +870,8 @@
         "signature": "400db42c3a46984118bff14260d60cec580057dc1ab4c2d7310beb643e4f5935"
       },
       "../../node_modules/@types/node/child_process.d.ts": {
-        "version": "123366127434e33eade36f3d06653dbc7457397fc93cfdd100776cfc12b6734c",
-        "signature": "123366127434e33eade36f3d06653dbc7457397fc93cfdd100776cfc12b6734c"
+        "version": "fbf717914b6e7d87d969b13c646b5d15dca61c9b89ea48e97a1513809445b003",
+        "signature": "fbf717914b6e7d87d969b13c646b5d15dca61c9b89ea48e97a1513809445b003"
       },
       "../../node_modules/@types/node/cluster.d.ts": {
         "version": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a",
@@ -1536,57 +1536,6 @@
       "../src/utils.ts": {
         "version": "7cabecbc78dff15658555293217bb50a688659ad2269e7e2e92ecf020e8c7b1c",
         "signature": "521506b4c89debf38315a7b05a4c3e7cc19deb5f48a41ac254c19b6bceb9adf5"
-      },
-      "../src/@types/modules.d.ts": {
-        "version": "65578c169850e6be17d27faaa8c02e8c3da3ca2d6dade3efed827c04c7e51de3",
-        "signature": "65578c169850e6be17d27faaa8c02e8c3da3ca2d6dade3efed827c04c7e51de3"
-      },
-      "../../node_modules/ts-invariant/lib/invariant.d.ts": {
-        "version": "0708e5b89a574f3655f9a36af531f86438e5b2155a5099a21bb03d324fd58519",
-        "signature": "0708e5b89a574f3655f9a36af531f86438e5b2155a5099a21bb03d324fd58519"
-      },
-      "../../node_modules/apollo-link-http-common/lib/index.d.ts": {
-        "version": "8ffc20e93dbcc8df858f9d3478cb09a9c6570b5f7d1e052306cd5019721ac514",
-        "signature": "8ffc20e93dbcc8df858f9d3478cb09a9c6570b5f7d1e052306cd5019721ac514"
-      },
-      "../../node_modules/apollo-link-http/lib/httplink.d.ts": {
-        "version": "f2298c738dd55d6a624af27b956fb2cd0b80cbbca0ffc4e35ca8e781dbb98433",
-        "signature": "f2298c738dd55d6a624af27b956fb2cd0b80cbbca0ffc4e35ca8e781dbb98433"
-      },
-      "../../node_modules/apollo-link-http/lib/index.d.ts": {
-        "version": "e6b2ec8a673e39ed2b773a7cc15411d95d286bcdec05633da62c3064ad05c08a",
-        "signature": "e6b2ec8a673e39ed2b773a7cc15411d95d286bcdec05633da62c3064ad05c08a"
-      },
-      "../src/__tests__/__utils.js": {
-        "version": "1d24c1deb4f9faecb12e54ed3eb1dea5d538a3e8b195e258851611fb9b6cdb33"
-      },
-      "../../node_modules/graphql-tag/index.d.ts": {
-        "version": "808599b6d2f161dba9260db25949a81ae85dda06a4e5c928dba6dd19365dc2d6",
-        "signature": "808599b6d2f161dba9260db25949a81ae85dda06a4e5c928dba6dd19365dc2d6"
-      },
-      "../src/__tests__/e2e.js": {
-        "version": "a938014b2356bcc10ab7e5c556f0e26d6a9606049aad5ae02fe5d110b9048af6"
-      },
-      "../src/datasources/__tests__/launch.js": {
-        "version": "62ebc9ffc32002e27925466368925e42d9aed433b2ca093c72f1e673b0205882"
-      },
-      "../src/datasources/__tests__/user.js": {
-        "version": "415f986a03b8e9c0ce926df8f4809a8993c20e1c19b5c6beb117a80b682a73f6"
-      },
-      "../src/__tests__/integration.js": {
-        "version": "317c9676419dd056f6252c3d25ea2bd859e8c840fd57ff9d22eb737bebeceecf"
-      },
-      "../src/__tests__/resolvers.mission.js": {
-        "version": "72e91033fffb73d6646aa63702ea2d2153c902628dcf70dd44614b83a3807722"
-      },
-      "../src/__tests__/resolvers.mutation.js": {
-        "version": "035aab173c5f0f35497cca824c205cbf041b3fbaae5e98e37d02a4aa9e3bc5c6"
-      },
-      "../src/__tests__/resolvers.query.js": {
-        "version": "e87b9b1f8cbdd08808883a92b3c99e5e1aa8a7ce52fa938e65d7a20a30a2df28"
-      },
-      "../src/__tests__/resolvers.user.js": {
-        "version": "737eff2158dcab8be505dcd04de0843c9e1b390ad962b31faaf1784a2b3cd6f3"
       }
     },
     "options": {
@@ -4138,88 +4087,6 @@
       "../src/utils.ts": [
         "../../node_modules/@types/node/util.d.ts",
         "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/@types/modules.d.ts": [
-        "../../node_modules/graphql/index.d.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../node_modules/ts-invariant/lib/invariant.d.ts": [
-        "../../node_modules/@types/node/ts3.2/index.d.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../node_modules/apollo-link-http-common/lib/index.d.ts": [
-        "../../node_modules/apollo-link/lib/index.d.ts",
-        "../../node_modules/ts-invariant/lib/invariant.d.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../node_modules/apollo-link-http/lib/httplink.d.ts": [
-        "../../node_modules/apollo-link/lib/index.d.ts",
-        "../../node_modules/apollo-link-http-common/lib/index.d.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../node_modules/apollo-link-http/lib/index.d.ts": [
-        "../../node_modules/apollo-link-http/lib/httplink.d.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/__tests__/__utils.js": [
-        "../../node_modules/apollo-link-http/lib/index.d.ts",
-        "../../node_modules/apollo-link/lib/index.d.ts",
-        "../src/index.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../node_modules/graphql-tag/index.d.ts": [
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/__tests__/e2e.js": [
-        "../src/index.ts",
-        "../../node_modules/graphql-tag/index.d.ts",
-        "../src/__tests__/__utils.js",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/datasources/__tests__/launch.js": [
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/datasources/__tests__/user.js": [
-        "../src/datasources/user.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/__tests__/integration.js": [
-        "../../node_modules/graphql-tag/index.d.ts",
-        "../src/__tests__/__utils.js",
-        "../src/datasources/__tests__/launch.js",
-        "../src/datasources/__tests__/user.js",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/__tests__/resolvers.mission.js": [
-        "../src/resolvers.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/__tests__/resolvers.mutation.js": [
-        "../src/resolvers.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/__tests__/resolvers.query.js": [
-        "../src/resolvers.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/__tests__/resolvers.user.js": [
-        "../src/resolvers.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -6708,37 +6575,6 @@
       ],
       "../src/index.ts": [
         "../../node_modules/firebase-functions/lib/index.d.ts"
-      ],
-      "../src/@types/modules.d.ts": [
-        "../../node_modules/graphql/index.d.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../node_modules/ts-invariant/lib/invariant.d.ts": [
-        "../../node_modules/@types/node/ts3.2/index.d.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../node_modules/apollo-link-http-common/lib/index.d.ts": [
-        "../../node_modules/apollo-link/lib/index.d.ts",
-        "../../node_modules/ts-invariant/lib/invariant.d.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../node_modules/apollo-link-http/lib/httplink.d.ts": [
-        "../../node_modules/apollo-link/lib/index.d.ts",
-        "../../node_modules/apollo-link-http-common/lib/index.d.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../node_modules/apollo-link-http/lib/index.d.ts": [
-        "../../node_modules/apollo-link-http/lib/httplink.d.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../node_modules/graphql-tag/index.d.ts": [
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
       ]
     }
   },

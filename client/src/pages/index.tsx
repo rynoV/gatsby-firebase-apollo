@@ -1,7 +1,8 @@
 import React from 'react'
-import { Layout } from '/src/components/common/Layout'
+import { FirebaseProvider } from '/src/firebase/FirebaseProvider'
 import { SignOut } from '/src/components/common/SignOut'
 import { UserList } from '/src/components/common/UserList'
+import { Layout } from '/src/components/common/Layout'
 
 // export const query = graphql`
 //     {
@@ -24,13 +25,15 @@ import { UserList } from '/src/components/common/UserList'
 //         }
 //     }
 // `
-
+//
 export default function Index() {
   return (
     <Layout>
-      <div>Hello firebase</div>
-      <UserList />
-      <SignOut />
+      <FirebaseProvider>
+        <div>Hello firebase</div>
+        <UserList />
+        <SignOut />
+      </FirebaseProvider>
     </Layout>
   )
 }

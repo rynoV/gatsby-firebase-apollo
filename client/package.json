@@ -7,16 +7,21 @@
   "scripts": {
     "build": "gatsby build",
     "clean-cache": "gatsby clean",
-    "develop": "yarn clean-cache && gatsby develop",
+    "develop": "yarn clean-cache && gatsby develop & yarn apollo-codegen",
     "lint": "tslint --project .",
     "serve": "firebase serve --only hosting",
     "predeploy": "yarn build",
     "deploy": "firebase deploy --only hosting",
     "test": "jest",
     "type-check": "rm -rf node_modules/@types/react-native/ && tsc --noEmit",
-    "type-check:watch": "yarn type-check -- --watch"
+    "type-check:watch": "yarn type-check -- --watch",
+    "apollo-codegen": "run-p apollo-codegen:*",
+    "apollo-codegen:server": "apollo codegen:generate --target=typescript --includes='./src/**' --endpoint=http://localhost:5000/fir-learn-f283b/us-central1/api/graphql --outputFlat --watch ./src/queryTypes.ts",
+    "apollo-codegen:gatsby": "apollo codegen:generate --target=typescript --includes='./src/**' --endpoint=http://localhost:8000/___graphql --tagName=graphql --outputFlat --watch ./src/gatsbyQueryTypes.ts",
+    "update-schema": "apollo client:download-schema --endpoint=http://localhost:8000/___graphql"
   },
   "dependencies": {
+    "@apollo/react-common": "^3.0.1",
     "@apollo/react-hooks": "^3.0.1",
     "@apollo/react-ssr": "^3.0.1",
     "apollo-boost": "^0.4.4",
@@ -57,6 +62,7 @@
     "@types/react-dom": "^16.8.5",
     "@types/react-helmet": "^5.0.8",
     "@types/typography": "^0.16.2",
+    "apollo": "^2.18.0",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "babel-preset-gatsby": "^0.2.8",
