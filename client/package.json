@@ -18,7 +18,7 @@
     "apollo-codegen": "run-p apollo-codegen:*",
     "apollo-codegen:server": "apollo codegen:generate --target=typescript --includes='./src/**' --endpoint=http://localhost:5000/fir-learn-f283b/us-central1/api/graphql --outputFlat --watch ./src/queryTypes.ts",
     "apollo-codegen:gatsby": "apollo codegen:generate --target=typescript --includes='./src/**' --endpoint=http://localhost:8000/___graphql --tagName=graphql --outputFlat --watch ./src/gatsbyQueryTypes.ts",
-    "update-schema": "apollo client:download-schema --endpoint=http://localhost:8000/___graphql"
+    "update-schema": "apollo client:download-schema --endpoint=http://localhost:8000/___graphql ./src/gatsbyQueries/schema.json"
   },
   "dependencies": {
     "@apollo/react-common": "^3.0.1",

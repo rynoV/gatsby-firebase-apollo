@@ -17995,3 +17995,242 @@ SyntaxError: Missing initializer in destructuring declaration
 [debug] [2019-09-05T03:05:05.221Z] [runtime-status] Ephemeral server used! {}
 [debug] [2019-09-05T03:05:05.224Z] [runtime-status] Ephemeral server survived. {}
 [info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-05T13:43:54.889Z] ----------------------------------------------------------------------
+[debug] [2019-09-05T13:43:54.892Z] Command:       /usr/local/bin/node /Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/.bin/firebase serve --only functions
+[debug] [2019-09-05T13:43:54.892Z] CLI Version:   7.3.1
+[debug] [2019-09-05T13:43:54.892Z] Platform:      darwin
+[debug] [2019-09-05T13:43:54.892Z] Node Version:  v10.15.0
+[debug] [2019-09-05T13:43:54.898Z] Time:          Thu Sep 05 2019 07:43:54 GMT-0600 (Mountain Daylight Time)
+[debug] [2019-09-05T13:43:54.898Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-05T13:43:54.913Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-05T13:43:54.913Z] > authorizing via signed-in user
+[debug] [2019-09-05T13:43:54.913Z] [iam] checking project fir-learn-f283b for permissions ["firebase.projects.get"]
+[debug] [2019-09-05T13:43:54.915Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-09-05T13:43:54.916Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-09-05T13:43:55.144Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-05T13:43:55.165Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-learn-f283b:testIamPermissions  
+
+[debug] [2019-09-05T13:43:55.317Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-05T13:43:55.319Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fir-learn-f283b  
+ 
+[debug] [2019-09-05T13:43:55.540Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Using node@10 from host.
+[info] ✔  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions" for Cloud Functions...
+[debug] [2019-09-05T13:43:56.370Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[debug] [2019-09-05T13:43:56.371Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T13:43:56.375Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T13:43:56.377Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:43:56.378Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Cannot find module '/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:581:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:507:25)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+    at /Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:660:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:745:11)
+    at startup (internal/bootstrap/node.js:283:19)
+[warn] ⚠  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-09-05T13:46:05.787Z] ----------------------------------------------------------------------
+[debug] [2019-09-05T13:46:05.790Z] Command:       /usr/local/bin/node /Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/.bin/firebase serve --only functions
+[debug] [2019-09-05T13:46:05.790Z] CLI Version:   7.3.1
+[debug] [2019-09-05T13:46:05.790Z] Platform:      darwin
+[debug] [2019-09-05T13:46:05.790Z] Node Version:  v10.15.0
+[debug] [2019-09-05T13:46:05.797Z] Time:          Thu Sep 05 2019 07:46:05 GMT-0600 (Mountain Daylight Time)
+[debug] [2019-09-05T13:46:05.797Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-05T13:46:05.811Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-05T13:46:05.811Z] > authorizing via signed-in user
+[debug] [2019-09-05T13:46:05.812Z] [iam] checking project fir-learn-f283b for permissions ["firebase.projects.get"]
+[debug] [2019-09-05T13:46:05.814Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-learn-f283b:testIamPermissions  
+
+[debug] [2019-09-05T13:46:06.083Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-05T13:46:06.086Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fir-learn-f283b  
+ 
+[debug] [2019-09-05T13:46:06.286Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Using node@10 from host.
+[info] ✔  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions" for Cloud Functions...
+[debug] [2019-09-05T13:46:07.024Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[debug] [2019-09-05T13:46:07.025Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T13:46:07.031Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T13:46:07.034Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:46:07.035Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[api]: http function initialized (http://localhost:5000/fir-learn-f283b/us-central1/api).
+[debug] [2019-09-05T13:46:15.204Z] Accepted request POST /fir-learn-f283b/us-central1/api/graphql --> api
+[debug] [2019-09-05T13:46:15.800Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-05T13:46:15.804Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T13:46:15.809Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T13:46:15.810Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:46:15.811Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:46:16.504Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-05T13:46:16.504Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-05T13:46:16.504Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-05T13:46:16.512Z] {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19399.sock"}
+[debug] [2019-09-05T13:46:16.518Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19399.sock"}
+[debug] [2019-09-05T13:46:16.573Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-05T13:46:16.582Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-05T13:46:25.950Z] Accepted request POST /fir-learn-f283b/us-central1/api/graphql --> api
+[debug] [2019-09-05T13:46:26.886Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-05T13:46:26.887Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T13:46:26.895Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T13:46:26.904Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:46:26.906Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:46:27.654Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-05T13:46:27.654Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-05T13:46:27.655Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-05T13:46:27.663Z] {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19411.sock"}
+[debug] [2019-09-05T13:46:27.666Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19411.sock"}
+[debug] [2019-09-05T13:46:27.714Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-05T13:46:27.721Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-05T13:47:15.135Z] Accepted request OPTIONS /fir-learn-f283b/us-central1/api/graphql --> api
+[debug] [2019-09-05T13:47:15.952Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-05T13:47:15.955Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T13:47:15.965Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T13:47:15.969Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:47:15.969Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:47:16.727Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-05T13:47:16.727Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-05T13:47:16.727Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-05T13:47:16.736Z] {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19454.sock"}
+[debug] [2019-09-05T13:47:16.743Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19454.sock"}
+[debug] [2019-09-05T13:47:16.761Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-05T13:47:16.769Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-09-05T13:47:16.771Z] Accepted request POST /fir-learn-f283b/us-central1/api/graphql --> api
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-05T13:47:17.206Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-05T13:47:17.208Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T13:47:17.212Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T13:47:17.213Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:47:17.214Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:47:17.632Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-05T13:47:17.632Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-05T13:47:17.632Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-05T13:47:17.640Z] {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19455.sock"}
+[debug] [2019-09-05T13:47:17.641Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19455.sock"}
+[debug] [2019-09-05T13:47:17.674Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-05T13:47:17.681Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[info] >  TypeError: Cannot read property 'code' of undefined
+[info] >      at FirebaseAuthError.get [as code] (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/utils/error.js:54:35)
+[info] >      at FirebaseAuthError.FirebaseError.toJSON (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/utils/error.js:70:24)
+[info] >      at JSON.stringify (<anonymous>)
+[info] >      at prettyJSONStringify (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/apollo-server-core/dist/runHttpQuery.js:266:17)
+[info] >      at throwHttpGraphQLError (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/apollo-server-core/dist/runHttpQuery.js:30:42)
+[info] >      at Object.<anonymous> (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/apollo-server-core/dist/runHttpQuery.js:69:28)
+[info] >      at Generator.next (<anonymous>)
+[info] >      at fulfilled (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/apollo-server-core/dist/runHttpQuery.js:5:58)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2019-09-05T13:48:27.806Z] Accepted request OPTIONS /fir-learn-f283b/us-central1/api/graphql --> api
+[debug] [2019-09-05T13:48:28.692Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-05T13:48:28.696Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T13:48:28.700Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T13:48:28.702Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:48:28.703Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:48:29.464Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-05T13:48:29.464Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-05T13:48:29.464Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-05T13:48:29.474Z] {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19465.sock"}
+[debug] [2019-09-05T13:48:29.479Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19465.sock"}
+[debug] [2019-09-05T13:48:29.498Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-05T13:48:29.514Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-09-05T13:48:29.515Z] Accepted request POST /fir-learn-f283b/us-central1/api/graphql --> api
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-05T13:48:29.954Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-05T13:48:29.956Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T13:48:29.959Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T13:48:29.963Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:48:29.964Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T13:48:30.415Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-05T13:48:30.415Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-05T13:48:30.415Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-05T13:48:30.426Z] {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19466.sock"}
+[debug] [2019-09-05T13:48:30.427Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_19466.sock"}
+[debug] [2019-09-05T13:48:30.470Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-05T13:48:30.476Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-05T18:45:34.686Z] Accepted request OPTIONS /fir-learn-f283b/us-central1/api/graphql --> api
+[debug] [2019-09-05T18:45:36.215Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-05T18:45:36.232Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T18:45:36.239Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T18:45:36.244Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T18:45:36.251Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T18:45:37.359Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-05T18:45:37.362Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-05T18:45:37.362Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-05T18:45:37.365Z] {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_21196.sock"}
+[debug] [2019-09-05T18:45:37.383Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_21196.sock"}
+[debug] [2019-09-05T18:45:37.436Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-05T18:45:37.450Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-05T18:45:37.492Z] Accepted request POST /fir-learn-f283b/us-central1/api/graphql --> api
+[debug] [2019-09-05T18:45:38.106Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-05T18:45:38.109Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T18:45:38.113Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T18:45:38.128Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T18:45:38.128Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T18:45:38.576Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-05T18:45:38.580Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-05T18:45:38.580Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-05T18:45:38.586Z] {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_21199.sock"}
+[debug] [2019-09-05T18:45:38.588Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_21199.sock"}
+[debug] [2019-09-05T18:45:38.631Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-05T18:45:38.641Z] [runtime-status] Ephemeral server survived. {}
+[info] >  TypeError: Cannot read property 'code' of undefined
+[info] >      at FirebaseAuthError.get [as code] (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/utils/error.js:54:35)
+[info] >      at FirebaseAuthError.FirebaseError.toJSON (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/utils/error.js:70:24)
+[info] >      at JSON.stringify (<anonymous>)
+[info] >      at prettyJSONStringify (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/apollo-server-core/dist/runHttpQuery.js:266:17)
+[info] >      at throwHttpGraphQLError (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/apollo-server-core/dist/runHttpQuery.js:30:42)
+[info] >      at Object.<anonymous> (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/apollo-server-core/dist/runHttpQuery.js:69:28)
+[info] >      at Generator.next (<anonymous>)
+[info] >      at fulfilled (/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/apollo-server-core/dist/runHttpQuery.js:5:58)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-05T18:45:45.354Z] Accepted request OPTIONS /fir-learn-f283b/us-central1/api/graphql --> api
+[debug] [2019-09-05T18:45:46.057Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-05T18:45:46.065Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T18:45:46.066Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T18:45:46.066Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T18:45:46.066Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T18:45:46.545Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-05T18:45:46.545Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-05T18:45:46.545Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-05T18:45:46.547Z] {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_21211.sock"}
+[debug] [2019-09-05T18:45:46.549Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_21211.sock"}
+[debug] [2019-09-05T18:45:46.567Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-05T18:45:46.574Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-05T18:45:46.596Z] Accepted request POST /fir-learn-f283b/us-central1/api/graphql --> api
+[debug] [2019-09-05T18:45:47.527Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/functions","node_version":"10.15.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-05T18:45:47.528Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-05T18:45:47.533Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.4.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-09-05T18:45:47.533Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T18:45:47.533Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/calumsieppert/web-projects/gatsby-firebase-apollo/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-09-05T18:45:47.985Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-05T18:45:47.985Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-05T18:45:47.986Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-05T18:45:47.994Z] {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_21214.sock"}
+[debug] [2019-09-05T18:45:47.995Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/3h/r9_524x168bbmjz5q_2r_zl80000gp/T/firebase_emulator_invocation_21214.sock"}
+[debug] [2019-09-05T18:45:48.056Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-05T18:45:48.059Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s

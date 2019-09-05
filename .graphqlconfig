@@ -1,0 +1,33 @@
+{
+  "name": "ApolloServer Schema",
+  "projects": {
+    "apollo": {
+      "includes": [
+        "./**"
+      ]
+    },
+    "gatsby": {
+      "includes": [
+        "./client/src/gatsbyQueries/**"
+      ]
+    }
+  },
+  "extensions": {
+    "endpoints": {
+      "Gatsby": {
+        "url": "http://localhost:8000/___graphql",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": true
+      },
+      "Apollo Server": {
+        "url": "http://localhost:5000/fir-learn-f283b/us-central1/api/graphql",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": true
+      }
+    }
+  }
+}
