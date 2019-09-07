@@ -9,7 +9,8 @@
 export interface AllUsers_allUsers_users {
   __typename: "User";
   email: string | null;
-  emailVerified: boolean;
+  displayName: string | null;
+  uid: string;
 }
 
 export interface AllUsers_allUsers {

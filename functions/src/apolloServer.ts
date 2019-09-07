@@ -4,6 +4,7 @@ import { typeDefs } from './schema'
 import { resolvers } from './resolvers'
 import { UserAPI } from './datasources/user'
 import { Request } from 'express'
+import { ChatAPI } from './datasources/chat'
 
 const dev = process.env.FUNCTIONS_EMULATOR
 
@@ -28,6 +29,7 @@ export const apolloServer = new ApolloServer({
   dataSources() {
     return {
       userAPI: new UserAPI(),
+      chatAPI: new ChatAPI(),
     }
   },
   introspection: !!dev,

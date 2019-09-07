@@ -1,6 +1,15 @@
 import { IResolvers } from 'graphql-tools'
+import { AuthenticationError } from 'apollo-server-express'
+import { UserAPI } from './datasources/user'
+import { auth } from 'firebase-admin'
+import { ChatAPI } from './datasources/chat'
 
-export const resolvers: IResolvers = {
+interface IContext {
+  dataSources: { userAPI: UserAPI, chatAPI: ChatAPI }
+  currentUser: auth.UserRecord | null
+}
+
+export const resolvers: IResolvers<any, IContext> = {
   Query: {
     async allUsers(
       _,
@@ -22,4 +31,13 @@ export const resolvers: IResolvers = {
       return dataSources.userAPI.getUser(idToken)
     },
   },
+  Mutation: {
+    createChat(_, { uids }, {dataSources, currentUser}) {
+      if (!currentUser) {
+        throw new AuthenticationError('You must be logged in to make this request.')
+      }
+
+      const chat = dataSources.chatAPI.createChat(uids)
+    }
+  }
 }

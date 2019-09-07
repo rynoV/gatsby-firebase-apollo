@@ -15,9 +15,36 @@ export const typeDefs = gql`
         user(idToken: ID!): User
     }
 
+    type Mutation {
+        createChat(uids: [ID!]!): Chat!
+    }
+
+    type Chat {
+        chatId: ID!
+        users: [User!]!
+        messages: MessageConnection!
+    }
+
+    type MessageConnection {
+        cursor: String
+        hasMore: Boolean!
+        messages(pageSize: Int, after: String): [Message]!
+    }
+
+    type Message {
+        from: User!
+        content: String!
+        createdAt: FirebaseTimestamp!
+    }
+
+    type FirebaseTimestamp {
+        _seconds: Int!
+        _nanoseconds: Int!
+    }
+
     type UserConnection {
         cursor: String
-        hasMore: Boolean
+        hasMore: Boolean!
         users: [User]
     }
 

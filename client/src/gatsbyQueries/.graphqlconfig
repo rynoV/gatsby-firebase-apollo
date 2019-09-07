@@ -1,6 +1,6 @@
 {
   "name": "Gatsby Schema",
-  "schemaPath": "schema.graphql",
+  "schemaPath": "schema.json",
   "extensions": {
     "endpoints": {
       "Gatsby": {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FirebaseProvider } from '/src/firebase/FirebaseProvider'
 import { SignOut } from '/src/components/common/SignOut'
-import { UserList } from '/src/components/common/UserList'
+import { UserFinder } from '/src/components/common/UserFinder'
 import { Layout } from '/src/components/common/Layout'
 
 // export const query = graphql`
@@ -30,8 +30,8 @@ export default function Index() {
   return (
     <Layout>
       <FirebaseProvider>
-        <div>Hello firebase</div>
-        <UserList />
+        <h1>Int Chat</h1>
+        <UserFinder />
         <SignOut />
       </FirebaseProvider>
     </Layout>

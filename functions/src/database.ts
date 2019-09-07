@@ -10,9 +10,8 @@ export declare namespace Database {
     [key: string]: any
   }
 
-  export interface ITrip extends IBaseDoc {
-    launchId: number
-    userId: number
+  export interface IChat extends IBaseDoc {
+    uids: string[]
   }
 
   export interface IUser extends IBaseDoc {
@@ -24,22 +23,20 @@ export declare namespace Database {
     [key: string]: unknown
   }
 
-  export type ReturnDoc<R> = R & IBaseDoc
-
-  export interface IStore<R> {
-    findOrCreate(query: Partial<R>): Promise<Array<ReturnDoc<R>> | null>
+  export interface IStore<R extends IChat | IUser> {
+    findOrCreate(query: Partial<R>): Promise<R[] | null>
 
     destroy(query: Partial<R>): Promise<boolean>
   }
 
-  export type collections = 'users' | 'trips'
+  export type collections = 'users' | 'chats'
 }
 
-type ReturnDocWithoutId<R extends Record<string, unknown>> =
+type ReturnDocWithoutId<R extends Partial<Database.IChat | Database.IUser>> =
   Partial<R>
   & Omit<Database.IBaseDoc, 'id'>
 
-export class Store<R extends Record<string, unknown>>
+export class Store<R extends Database.IChat | Database.IUser>
   implements Database.IStore<R> {
   private readonly collection: admin.firestore.CollectionReference
 
@@ -86,13 +83,13 @@ export class Store<R extends Record<string, unknown>>
    * @return A promise resolving to an array containing the created or found
    *   document(s), or null if an error occurred.
    */
-  public async findOrCreate(query: Partial<R>): Promise<Array<Database.ReturnDoc<R>> | null> {
+  public async findOrCreate(query: Partial<R>): Promise<R[] | null> {
     try {
       const { docs } = await this.getQuerySnapshot(query)
 
       if (docs[0]) {
         return await Promise.all(docs.map(async (doc: admin.firestore.QueryDocumentSnapshot) => {
-          return await this.getDocDataWithId(doc.ref) as Database.ReturnDoc<R>
+          return await this.getDocDataWithId(doc.ref) as R
         }))
       } else {
         const newDocRef = await this.collection.add(
@@ -108,28 +105,32 @@ export class Store<R extends Record<string, unknown>>
     }
   }
 
-  private createDocumentObject(query: Partial<R>): ReturnDocWithoutId<Partial<R>> {
-    const serverTimestamp                            = admin.firestore.FieldValue.serverTimestamp()
-    const queryWithTimestamps: ReturnDocWithoutId<R> = {
-      ...query,
+  public async create(fields: Partial<R>, docName?: string): Promise<R> {
+    const documentObject = this.createDocumentObject(fields)
+    let docRef: FirebaseFirestore.DocumentReference
+
+    if (docName) {
+      docRef = this.collection.doc(docName)
+
+      await docRef.set(documentObject)
+    } else {
+      docRef = await this.collection.add(documentObject)
+    }
+
+    return this.getDocDataWithId(docRef)
+  }
+
+  private createDocumentObject(fields: Partial<R>): ReturnDocWithoutId<Partial<R>> {
+    const serverTimestamp = admin.firestore.FieldValue.serverTimestamp()
+
+    return {
+      ...fields,
       createdAt: serverTimestamp,
       updatedAt: serverTimestamp,
     }
-
-    return Object.entries(queryWithTimestamps).reduce(
-      (
-        newDoc: ReturnDocWithoutId<Partial<R>>,
-        queryPair,
-      ) => {
-        // @ts-ignore
-        newDoc[queryPair[0]] = queryPair[1]
-        return newDoc
-      },
-      {} as unknown as ReturnDocWithoutId<Partial<R>>,
-    )
   }
 
-  private async getDocDataWithId(docRef: admin.firestore.DocumentReference): Promise<Database.ReturnDoc<R>> {
+  private async getDocDataWithId(docRef: admin.firestore.DocumentReference): Promise<R> {
     const { id }         = docRef
     const newDocSnapshot = await docRef.get()
     const newDoc         = ((await newDocSnapshot.data()) as unknown) as ReturnDocWithoutId<R>
@@ -137,7 +138,7 @@ export class Store<R extends Record<string, unknown>>
     return {
       ...newDoc,
       id,
-    } as unknown as Database.ReturnDoc<R>
+    } as unknown as R
   }
 
   private getQuerySnapshot(

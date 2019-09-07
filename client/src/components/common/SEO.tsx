@@ -1,9 +1,9 @@
-import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
 import { ISEOQuery } from '/src/@types'
+import { useSEOQuery } from '/src/gatsbyQueries/SEO'
 
 interface IProps {
   title?: string | null
@@ -14,20 +14,7 @@ interface IProps {
 }
 
 export function SEO(props: IProps) {
-  const data: ISEOQuery = useStaticQuery(graphql`
-      query SEO {
-          site {
-              siteMetadata {
-                  defaultTitle: title
-                  titleTemplate
-                  defaultDescription: description
-                  siteUrl: url
-                  defaultImage: image
-                  instagramUsername
-              }
-          }
-      }
-  `)
+  const data: ISEOQuery = useSEOQuery()
 
   return <PureSEO data={data} {...props} />
 }

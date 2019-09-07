@@ -48,4 +48,8 @@ export class UserAPI extends DataSource {
   ): Promise<admin.auth.ListUsersResult> {
     return this.auth.listUsers(pageSize, after)
   }
+
+  public async addToUser() {
+
+  }
 }
