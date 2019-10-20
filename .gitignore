@@ -1,6 +1,12 @@
 # Vim files
 *.vim
 
+lib/
+
+.undodir
+
+tags
+
 # Logs
 logs
 *.log
@@ -78,6 +84,6 @@ yarn-error.log
 !/functions/yarn-error.log
 !/functions/firebase-debug.log
 !/.firebase/
-/yarn.lock
+yarn.lock
 /.firebase/hosting.cHVibGlj.cache
 /.firebase/hosting.Y2xpZW50L3B1YmxpYw.cache

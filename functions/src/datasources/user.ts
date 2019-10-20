@@ -2,6 +2,7 @@ import { DataSource, DataSourceConfig } from 'apollo-datasource'
 import { IUser } from '../@types'
 import admin, { ServiceAccount } from 'firebase-admin'
 import { serviceAccount } from '../firebase-admin-key'
+import { Database, Store } from '../store'
 
 interface IContextProps {
   user?: {
@@ -14,6 +15,7 @@ export class UserAPI extends DataSource {
   // @ts-ignore
   private context: IContextProps | undefined
   private auth: admin.auth.Auth
+  private store: Store<Database.IUser>
 
   constructor() {
     super()
@@ -25,6 +27,7 @@ export class UserAPI extends DataSource {
     }
 
     this.auth = admin.auth()
+    this.store = new Store<Database.IUser>('users')
   }
 
   /**
@@ -44,12 +47,14 @@ export class UserAPI extends DataSource {
 
   public async getAllUsers(
     pageSize: number,
-    after?: string,
+    after?: string
   ): Promise<admin.auth.ListUsersResult> {
     return this.auth.listUsers(pageSize, after)
   }
 
-  public async addToUser() {
-
+  public async addChatToUser(uid: string, chatPath: string) {
+    return this.store.update(uid, {
+      chats: { value: chatPath, type: 'array' },
+    })
   }
 }

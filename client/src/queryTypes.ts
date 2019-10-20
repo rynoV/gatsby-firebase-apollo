@@ -16,7 +16,7 @@ export interface AllUsers_allUsers_users {
 export interface AllUsers_allUsers {
   __typename: "UserConnection";
   cursor: string | null;
-  hasMore: boolean | null;
+  hasMore: boolean;
   users: (AllUsers_allUsers_users | null)[] | null;
 }
 

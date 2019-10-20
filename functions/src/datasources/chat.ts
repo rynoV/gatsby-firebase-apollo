@@ -1,5 +1,5 @@
 import { DataSource, DataSourceConfig } from 'apollo-datasource'
-import { Database, Store } from '../database'
+import { Database, Store } from '../store'
 
 interface IContextProps {
   user?: {
@@ -29,7 +29,23 @@ export class ChatAPI extends DataSource {
     this.context = config.context
   }
 
-  public async createChat(uids: string[]): Promise<Database.IChat> {
-    return this.store.create({ uids })
+  public async createChat(
+    uids: string[]
+  ): Promise<Array<Database.IChat | null>> {
+    return this.store.findOrCreate({ uids })
+  }
+
+  public async createChatInBatch(
+    uids: string[],
+    batch: FirebaseFirestore.WriteBatch
+  ): Promise<string[]> {
+    return this.store.findOrCreate({ uids }, { batch })
+  }
+
+  public async createChatInTransaction(
+    uids: string[],
+    transaction: FirebaseFirestore.Transaction
+  ): Promise<string[]> {
+    return this.store.findOrCreate({ uids }, { transaction })
   }
 }

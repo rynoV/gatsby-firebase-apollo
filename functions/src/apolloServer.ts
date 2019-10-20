@@ -11,7 +11,7 @@ const dev = process.env.FUNCTIONS_EMULATOR
 export const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
-  context      : async ({ req }: { req: Request }) => {
+  context: async ({ req }: { req: Request }) => {
     const idToken = (req.headers && req.headers.authorization) || ''
 
     if (!idToken) {
@@ -33,5 +33,5 @@ export const apolloServer = new ApolloServer({
     }
   },
   introspection: !!dev,
-  playground   : !!dev,
+  playground: !!dev,
 })
