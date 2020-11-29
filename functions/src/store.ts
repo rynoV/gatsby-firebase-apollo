@@ -1,25 +1,14 @@
-import admin, { ServiceAccount } from 'firebase-admin'
 import { ApolloError } from 'apollo-server-express'
+import admin, { ServiceAccount } from 'firebase-admin'
 import { serviceAccount } from './firebase-admin-key'
 
-const dev = process.env.FUNCTIONS_EMULATOR
-
 function getFirestore() {
-  if (dev) {
-    const firebase = require('@firebase/testing')
-    if (firebase.apps().length === 0) {
-      return firebase
-        .initializeAdminApp({ projectId: 'my-test-project' })
-        .firestore()
-    }
-  } else {
-    if (!admin.apps.length) {
-      admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount as ServiceAccount),
-      })
-    }
-    return admin.firestore()
+  if (!admin.apps.length) {
+    admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount as ServiceAccount),
+    })
   }
+  return admin.firestore()
 }
 
 export const firestore = getFirestore()

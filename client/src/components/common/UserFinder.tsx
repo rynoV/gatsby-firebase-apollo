@@ -10,17 +10,17 @@ import {
 import * as JsSearch from 'js-search'
 
 const ALL_USERS = gql`
-    query AllUsers($after: String, $pageSize: Int) {
-        allUsers(after: $after, pageSize: $pageSize) {
-            cursor
-            hasMore
-            users {
-                email
-                displayName
-                uid
-            }
-        }
+  query AllUsers($after: String, $pageSize: Int) {
+    allUsers(after: $after, pageSize: $pageSize) {
+      cursor
+      hasMore
+      users {
+        email
+        displayName
+        uid
+      }
     }
+  }
 `
 
 const search = new JsSearch.Search('uid')
@@ -32,8 +32,10 @@ export const UserFinder: React.FC = function() {
     return null
   }
 
-  const [searchResults, setSearchResults] = useState<AllUsers_allUsers_users[]>()
-  const searchInputRef                    = useRef<HTMLInputElement>(null)
+  const [searchResults, setSearchResults] = useState<
+    AllUsers_allUsers_users[]
+  >()
+  const searchInputRef = useRef<HTMLInputElement>(null)
 
   const { data, loading, error } = useQuery<AllUsers, AllUsersVariables>(
     ALL_USERS,
@@ -51,7 +53,7 @@ export const UserFinder: React.FC = function() {
           })
         }
       },
-    },
+    }
   )
 
   if (loading) {
@@ -65,7 +67,7 @@ export const UserFinder: React.FC = function() {
   function handleSearch() {
     if (searchInputRef.current) {
       setSearchResults(search.search(
-        searchInputRef.current.value,
+        searchInputRef.current.value
       ) as AllUsers_allUsers_users[])
     }
   }
@@ -93,15 +95,15 @@ export const UserFinder: React.FC = function() {
 function getUserList(users: Array<AllUsers_allUsers_users | null>) {
   return users
     ? users.map(user => {
-      if (!user || !user.email || !user.displayName) {
-        return null
-      }
+        if (!user || !user.email || !user.displayName) {
+          return null
+        }
 
-      return (
-        <li key={user.email}>
-          {user.email}: {user.displayName}
-        </li>
-      )
-    })
+        return (
+          <li key={user.email}>
+            {user.email}: {user.displayName}
+          </li>
+        )
+      })
     : null
 }

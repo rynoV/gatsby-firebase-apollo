@@ -2,16 +2,18 @@
   "name": "functions",
   "version": "1.0.0",
   "scripts": {
-    "develop": "run-p type-check:watch serve",
+    "dev": "run-p type-check:watch emulate",
     "lint": "tslint --project tsconfig.json",
     "build": "tsc",
+    "emulate": "FIRESTORE_EMULATOR_HOST=localhost:8080 firebase emulators:start --only firestore,functions",
     "serve": "yarn build && firebase serve --only functions,firestore",
     "shell": "yarn build && firebase functions:shell",
     "start": "yarn shell",
     "predeploy": "yarn build",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "type-check:watch": "yarn build --watch --preserveWatchOutput"
+    "type-check:watch": "yarn build --watch --preserveWatchOutput",
+    "test": "jest"
   },
   "engines": {
     "node": "10"

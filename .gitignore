@@ -87,3 +87,29 @@ yarn-error.log
 yarn.lock
 /.firebase/hosting.cHVibGlj.cache
 /.firebase/hosting.Y2xpZW50L3B1YmxpYw.cache
+
+# create by https://github.com/iamcco/coc-gitignore (Sat Nov 02 2019 20:31:40 GMT-0600 (Mountain Daylight Time))
+# Typo3.gitignore:
+## TYPO3 v6.2
+# Ignore several upload and file directories.
+/fileadmin/user_upload/
+/fileadmin/_temp_/
+/fileadmin/_processed_/
+/uploads/
+# Ignore cache
+/typo3conf/temp_CACHED*
+/typo3conf/temp_fieldInfo.php
+/typo3conf/deprecation_*.log
+/typo3conf/ENABLE_INSTALL_TOOL
+/typo3conf/realurl_autoconf.php
+/FIRST_INSTALL
+# Ignore system folders, you should have them symlinked.
+# If not comment out the following entries.
+/typo3
+/typo3_src
+/typo3_src-*
+/Packages
+/.htaccess
+/index.php
+# Ignore temp directory.
+/typo3temp/

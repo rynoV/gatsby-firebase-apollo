@@ -16,8 +16,9 @@ let firebaseCache: typeof firebaseType | undefined
 export function getUiConfig(
   firebase: typeof firebaseType
 ): firebaseui.auth.Config {
+    const newLocal = 'popup'
   return {
-    signInFlow: 'popup',
+    signInFlow: newLocal,
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       firebase.auth.EmailAuthProvider.PROVIDER_ID,

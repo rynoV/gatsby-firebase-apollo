@@ -1442,8 +1442,8 @@
         "signature": "f55c8a8202d1097629443897a416a85f4d9afe2b7dc1eef8536b0fcf32c6a031"
       },
       "../src/store.ts": {
-        "version": "c7bb9d86e85acff6f47e78e7ce949f82eaf095a898003267fc1b449e7bcd976f",
-        "signature": "81f32f042e2d0f79f4bb7ae13e09f82023490e1d1cf8f59729dc52fffadb1fbb"
+        "version": "f70f4aaf2341d268214d57cb0c715b3efd5650037f22ba965a0d8923e7e5f1ce",
+        "signature": "55f3ff64442d5a54bb1583af9a46154e93134a71beae10bd2b7e70f84b5c1721"
       },
       "../src/datasources/chat.ts": {
         "version": "8fa73d4a6485d60dabeef0ae28816e631412a2e5e9a40c76d0b63fb0b4472c84",
@@ -1462,7 +1462,7 @@
         "signature": "76388b786fc27b61751301f403af90f6d9b0315ad1d282813ff8ff39d5e6244d"
       },
       "../src/apolloServer.ts": {
-        "version": "7fd91de8dd30fe7130ad4fccbe186927d38ac865b5c953339a0ff4af987c63ab",
+        "version": "a9a686f492d860c78ef33843c4bdd4c782d0353bfda11c267c126a672c9afcc8",
         "signature": "859aa194b587a1dc3aef1c3157b3eb1ef6e3507be352758da428503f215ff235"
       },
       "../../node_modules/firebase-functions/lib/function-configuration.d.ts": {
@@ -1572,8 +1572,6 @@
       "forceConsistentCasingInFileNames": true,
       "moduleResolution": 2,
       "isolatedModules": true,
-      "watch": true,
-      "preserveWatchOutput": true,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
@@ -3910,8 +3908,8 @@
         "../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/store.ts": [
-        "../../node_modules/firebase-admin/lib/index.d.ts",
         "../../node_modules/apollo-server-express/dist/index.d.ts",
+        "../../node_modules/firebase-admin/lib/index.d.ts",
         "../src/firebase-admin-key.ts",
         "../../node_modules/@types/node/util.d.ts",
         "../../node_modules/@types/node/ts3.2/util.d.ts"

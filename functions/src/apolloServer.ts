@@ -12,19 +12,23 @@ export const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
   context: async ({ req }: { req: Request }) => {
-    const idToken = (req.headers && req.headers.authorization) || ''
+    if (!dev) {
+      const idToken = (req.headers && req.headers.authorization) || ''
 
-    if (!idToken) {
-      return { currentUser: null }
+      if (!idToken) {
+        return { currentUser: null }
+      }
+
+      const currentUser = await new UserAPI().getUser(idToken)
+
+      if (!currentUser) {
+        return { currentUser: null }
+      }
+
+      return { currentUser }
     }
 
-    const currentUser = await new UserAPI().getUser(idToken)
-
-    if (!currentUser) {
-      return { currentUser: null }
-    }
-
-    return { currentUser }
+    return { uid: 'test' }
   },
   dataSources() {
     return {

@@ -6,12 +6,14 @@ import { SignIn } from '/src/components/common/SignIn'
 import { globalWindow, idTokenLocalStorageKey } from '/src/vars'
 
 export const FirebaseProvider: React.FC = function({ children }) {
-  const [currentFirebaseApp, setCurrentFirebaseApp] = useState<typeof firebase>()
-  const [authenticated, setAuthenticated]           = useState<boolean>(false)
+  const [currentFirebaseApp, setCurrentFirebaseApp] = useState<
+    typeof firebase
+  >()
+  const [authenticated, setAuthenticated] = useState<boolean>(false)
 
   useEffect(() => {
-    const app      = import('firebase/app')
-    const auth     = import('firebase/auth')
+    const app = import('firebase/app')
+    const auth = import('firebase/auth')
     const database = import('firebase/database')
 
     Promise.all([app, auth, database]).then(values => {
@@ -30,7 +32,7 @@ export const FirebaseProvider: React.FC = function({ children }) {
         } else {
           globalWindow.localStorage.setItem(
             idTokenLocalStorageKey,
-            await user.getIdToken(),
+            await user.getIdToken()
           )
 
           setAuthenticated(true)

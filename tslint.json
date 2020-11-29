@@ -1,12 +1,6 @@
 {
-  "rulesDirectory": [
-    "tslint-plugin-prettier"
-  ],
-  "extends": [
-    "tslint:latest",
-    "tslint-react",
-    "tslint-config-prettier"
-  ],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
   "rules": {
     "no-unnecessary-initializer": false,
     "ordered-imports": false,
@@ -18,12 +12,7 @@
     "no-console": false,
     "variable-name": false,
     "no-var-requires": false,
-    "quotemark": [
-      true,
-      "single",
-      "jsx-single",
-      "avoid-template"
-    ],
+    "quotemark": [true, "single", "jsx-single", "avoid-template"],
     // -- Strict errors --
     // These lint rules are likely always a good idea.
 
@@ -62,20 +51,14 @@
 
     // Do not allow a variable to be declared more than once in the same block. Consider function parameters in this
     // rule.
-    "no-duplicate-variable": [
-      true,
-      "check-parameters"
-    ],
+    "no-duplicate-variable": [true, "check-parameters"],
 
     // Disallows a variable definition in an inner scope from shadowing a variable in an outer scope. Developers should
     // instead use a separate variable name.
     "no-shadowed-variable": true,
 
     // Empty blocks are almost never needed. Allow the one general exception: empty catch blocks.
-    "no-empty": [
-      true,
-      "allow-empty-catch"
-    ],
+    "no-empty": [true, "allow-empty-catch"],
 
     // Functions must either be handled directly (e.g. with a catch() handler) or returned to another function.
     // This is a major source of errors in Cloud Functions and the team strongly recommends leaving this rule on.
@@ -95,10 +78,7 @@
     "no-unsafe-finally": true,
 
     // Expressions must always return a value. Avoids common errors like const myValue = functionReturningVoid();
-    "no-void-expression": [
-      true,
-      "ignore-arrow-function-shorthand"
-    ],
+    "no-void-expression": [true, "ignore-arrow-function-shorthand"],
 
     "only-arrow-functions": false,
 

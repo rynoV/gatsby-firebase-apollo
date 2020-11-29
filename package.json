@@ -2,8 +2,8 @@
   "name": "gatsby-netlify-apollo",
   "version": "1.0.0",
   "scripts": {
-    "dev:functions": "yarn workspace functions develop",
-    "dev:client": "yarn workspace client develop",
+    "dev:functions": "yarn workspace functions dev",
+    "dev:client": "yarn workspace client dev",
     "dev": "run-p dev:*",
     "serve:functions": "yarn workspace functions serve",
     "serve:client": "yarn wait-for-server && yarn workspace client serve --port 5001",
@@ -20,10 +20,17 @@
     "functions"
   ],
   "devDependencies": {
+    "@babel/preset-typescript": "^7.6.0",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@types/jest": "^24.0.19",
     "apollo": "^2.18.0",
+    "babel-jest": "^24.9.0",
     "firebase-tools": "^7.3.0",
+    "jest": "^24.9.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0"
   },
   "private": true
 }
